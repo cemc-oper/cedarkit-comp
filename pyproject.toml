@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cedarkit-comp"
+authors = [
+    {name="Wang Dapeng", email="perillaroc@gmail.com"}
+]
+description = "A meteorological computation tool for CEMC/CMA."
+readme = "README.md"
+keywords = ["computation", "meteorological"]
+dynamic = ["version"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+
+    "Intended Audience :: Developers",
+
+    'License :: OSI Approved :: Apache Software License',
+
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "numpy",
+    "pandas",
+    "xarray",
+    "scipy",
+    'importlib-metadata; python_version<"3.8"',
+]
+
+[project.urls]
+Homepage = "https://github.com/perillaroc/cedarkit-comp"
+Repository = "https://github.com/perillaroc/cedarkit-comp.git"
+
+[project.optional-dependencies]
+test = ["pytest"]
+cov = ["pytest-cov", "codecov"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["cedarkit.comp"]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools_scm]
+version_file = "cedarkit/comp/_version.py"
