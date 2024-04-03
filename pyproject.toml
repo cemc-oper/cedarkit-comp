@@ -10,6 +10,7 @@ authors = [
 description = "A meteorological computation tool for CEMC/CMA."
 readme = "README.md"
 keywords = ["computation", "meteorological"]
+license = { text = "Apache-2.0" }
 dynamic = ["version"]
 classifiers = [
     "Development Status :: 3 - Alpha",
