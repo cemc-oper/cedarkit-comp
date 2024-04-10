@@ -4,6 +4,10 @@
 
 ## 安装
 
+```bash
+pip install cedarkit-comp
+```
+
 ## 使用
 
 ## LICENSE
